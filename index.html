@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dewan Farm Karawang | Peternakan Domba Modern & Terpercaya</title>
+    <meta name="description" content="Peternakan Domba Berkualitas untuk Qurban, Aqiqah, Pembibitan, dan Penggemukan dengan standar perawatan modern di Karawang.">
+    
+    <!-- Favicon SVG dynamic -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F5132'/><path d='M30 35 C30 20, 70 20, 70 35 C70 50, 55 50, 50 65 L50 80' fill='none' stroke='%23D4AF37' stroke-width='8' stroke-linecap='round'/><circle cx='50' cy='35' r='10' fill='%23D4AF37'/></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#0F5132',    // Emerald Green
+                            secondary: '#1B5E20',  // Forest Green
+                            accent: '#D4AF37',     // Luxury Gold
+                            accentHover: '#B89528',
+                            darkBg: '#092317',
+                            cardDark: '#113524'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Poppins', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    },
+                    borderRadius: {
+                        '16': '16px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glassmorphism {
+            background: rgba(15, 81, 50, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .dark .glass-card {
+            background: rgba(17, 53, 36, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #FFF8DC 50%, #B89528 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        .dark ::-webkit-scrollbar-track { background: #092317; }
+        ::-webkit-scrollbar-thumb { background: #0F5132; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-brand-darkBg dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Scroll Progress Bar -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-brand-accent z-50 transition-all duration-150" style="width: 0%;"></div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-50 bg-brand-primary flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="relative flex flex-col items-center">
+            <!-- Dynamic Logo Animated -->
+            <svg class="w-24 h-24 mb-4 animate-bounce" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="100" rx="20" fill="#0F5132"/>
+                <path d="M30 35 C30 20, 70 20, 70 35 C70 50, 55 50, 50 65 L50 80" stroke="#D4AF37" stroke-width="8" stroke-linecap="round"/>
+                <circle cx="50" cy="35" r="8" fill="#D4AF37"/>
+                <path d="M25 45 C20 40, 20 25, 35 25" stroke="#D4AF37" stroke-width="5" stroke-linecap="round"/>
+                <path d="M75 45 C80 40, 80 25, 65 25" stroke="#D4AF37" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+            <h2 class="text-2xl font-bold font-heading text-white tracking-widest">DEWAN FARM</h2>
+            <p class="text-brand-accent text-sm tracking-wider uppercase mt-1">Karawang</p>
+            <div class="w-32 h-1 bg-white/20 rounded-full mt-6 overflow-hidden">
+                <div class="w-full h-full bg-brand-accent animate-pulse"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOP BAR -->
+    <div class="bg-brand-secondary text-white text-xs py-2 px-4 border-b border-brand-accent/20 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fa-solid fa-location-dot text-brand-accent mr-1"></i> Karawang, Jawa Barat</span>
+                <span><i class="fa-solid fa-clock text-brand-accent mr-1"></i> Setiap Hari: 09:00 - 16:00 WIB</span>
+                <span><i class="fa-solid fa-truck-fast text-brand-accent mr-1"></i> Pengiriman Seluruh Indonesia</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="mailto:putradhanydewanto@gmail.com" class="hover:text-brand-accent transition"><i class="fa-solid fa-envelope mr-1"></i> putradhanydewanto@gmail.com</a>
+                <a href="https://wa.me/6285219602595" target="_blank" class="hover:text-brand-accent transition"><i class="fa-brands fa-whatsapp mr-1"></i> 085219602595</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR Sticky SPA -->
+    <nav id="navbar" class="sticky top-0 z-40 w-full transition-all duration-300 glassmorphism border-b border-gray-200/50 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#beranda" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-brand-primary rounded-16 flex items-center justify-center p-2 shadow-md border border-brand-accent/30 group-hover:scale-105 transition duration-300">
+                        <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 35 C30 20, 70 20, 70 35 C70 50, 55 50, 50 65 L50 80" stroke="#D4AF37" stroke-width="8" stroke-linecap="round"/>
+                            <circle cx="50" cy="35" r="8" fill="#D4AF37"/>
+                            <path d="M25 45 C20 40, 20 25, 35 25" stroke="#D4AF37" stroke-width="5" stroke-linecap="round"/>
+                            <path d="M75 45 C80 40, 80 25, 65 25" stroke="#D4AF37" stroke-width="5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-heading font-bold text-xl tracking-wide text-brand-primary dark:text-white block leading-tight">DEWAN FARM</span>
+                        <span class="text-xs text-brand-accent font-semibold tracking-widest uppercase block">KARAWANG</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden xl:flex items-center space-x-5 text-sm font-medium">
+                    <a href="#beranda" class="nav-link text-brand-primary dark:text-gray-200 hover:text-brand-accent dark:hover:text-brand-accent transition">Beranda</a>
+                    <a href="#tentang" class="nav-link text-gray-600 dark:text-gray-300 hover:text-brand-accent transition">Tentang</a>
+                    <a href="#produk" class="nav-link text-gray-600 dark:text-gray-300 hover:text-brand-accent transition">Produk</a>
+                    <a href="#layanan" class="nav-link text-gray-600 dark:text-gray-300 hover:text-brand-accent transition">Layanan</a>
+                    <a href="#kepercayaan" class="nav-link text-gray-600 dark:text-gray-300 hover:text-brand-accent transition">Kepercayaan</a>
+                    <a href="#mitra" class="nav-link text-gray-600 dark:text-gray-300 hover:text-brand-accent transition">Mitra</a>
+                    <a href="#galeri" class="nav-link text-gray-600 dark:text-gray-300 hover:text-brand-accent transition">Galeri</a>
+                    <a href="#artikel" class="nav-link text-gray-600 dark:text-gray-300 hover:text-brand-accent transition">Artikel</a>
+                    <a href="#testimoni" class="nav-link text-gray-600 dark:text-gray-300 hover:text-brand-accent transition">Testimoni</a>
+                    <a href="#kontak" class="nav-link text-gray-600 dark:text-gray-300 hover:text-brand-accent transition">Kontak</a>
+                </div>
+
+                <!-- Action Controls -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <!-- Search Trigger -->
+                    <button onclick="toggleSearch()" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-brand-cardDark text-gray-600 dark:text-gray-300 transition" title="Cari">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-brand-cardDark text-gray-600 dark:text-gray-300 transition" title="Ganti Mode">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-brand-accent"></i>
+                    </button>
+                    <!-- Lang Toggle -->
+                    <span class="text-xs font-bold text-gray-400">ID | EN</span>
+                    
+                    <!-- CTA Button -->
+                    <a href="https://wa.me/6285219602595?text=Halo%20Dewan%20Farm%20Karawang,%20saya%20tertarik%20dengan%20produk%20yang%20tersedia.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="bg-brand-accent hover:bg-brand-accentHover text-brand-primary font-semibold px-5 py-2.5 rounded-16 shadow-lg transition duration-300 transform hover:-translate-y-0.5 flex items-center space-x-2 text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Pesan Sekarang</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="flex xl:hidden items-center space-x-2">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg text-gray-600 dark:text-gray-300">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-brand-accent"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-brand-primary dark:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-brand-darkBg border-b border-gray-200 dark:border-gray-800 px-4 pt-2 pb-6 space-y-3 shadow-2xl">
+            <a href="#beranda" class="mobile-nav-link block py-2 text-gray-700 dark:text-gray-200 font-medium">Beranda</a>
+            <a href="#tentang" class="mobile-nav-link block py-2 text-gray-700 dark:text-gray-200 font-medium">Tentang Kami</a>
+            <a href="#produk" class="mobile-nav-link block py-2 text-gray-700 dark:text-gray-200 font-medium">Produk Domba</a>
+            <a href="#layanan" class="mobile-nav-link block py-2 text-gray-700 dark:text-gray-200 font-medium">Layanan</a>
+            <a href="#kepercayaan" class="mobile-nav-link block py-2 text-gray-700 dark:text-gray-200 font-medium">Kepercayaan & Legalitas</a>
+            <a href="#mitra" class="mobile-nav-link block py-2 text-gray-700 dark:text-gray-200 font-medium">Kemitraan</a>
+            <a href="#galeri" class="mobile-nav-link block py-2 text-gray-700 dark:text-gray-200 font-medium">Galeri Peternakan</a>
+            <a href="#artikel" class="mobile-nav-link block py-2 text-gray-700 dark:text-gray-200 font-medium">Artikel & Edukasi</a>
+            <a href="#testimoni" class="mobile-nav-link block py-2 text-gray-700 dark:text-gray-200 font-medium">Testimoni</a>
+            <a href="#kontak" class="mobile-nav-link block py-2 text-gray-700 dark:text-gray-200 font-medium">Kontak</a>
+            <a href="https://wa.me/6285219602595?text=Halo%20Dewan%20Farm%20Karawang,%20saya%20tertarik%20dengan%20produk%20yang%20tersedia." target="_blank" class="w-full bg-brand-accent text-brand-primary text-center font-bold py-3 rounded-16 block mt-4 shadow">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Hubungi WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Search Overlay Dynamic -->
+    <div id="search-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-md hidden flex items-start justify-center pt-20 px-4">
+        <div class="bg-white dark:bg-brand-cardDark w-full max-w-2xl rounded-2xl p-6 shadow-2xl relative">
+            <button onclick="toggleSearch()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <h3 class="text-lg font-bold mb-4 text-brand-primary dark:text-brand-accent">Cari di Dewan Farm Karawang</h3>
+            <div class="relative">
+                <input type="text" placeholder="Ketik kata kunci: Qurban, Dorper, Aqiqah, Pembibitan..." class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-brand-darkBg text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-accent">
+                <button class="absolute right-3 top-3 text-brand-primary dark:text-brand-accent"><i class="fa-solid fa-magnifying-glass text-xl"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. SECTION BERANDA / HERO -->
+    <section id="beranda" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 pb-24">
+        <!-- Background Overlay Image & Parallax gradient -->
+        <div class="absolute inset-0 z-0">
+            <img src="logo.png" class="w-full h-full object-cover object-center filter brightness-50 dark:brightness-40" alt="Peternakan Domba Modern Dewan Farm">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-primary/90 via-brand-primary/60 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white w-full">
+            <div class="max-w-3xl" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center space-x-2 bg-brand-accent/20 border border-brand-accent/40 rounded-full px-4 py-1.5 mb-6 backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span>
+                    <span class="text-xs md:text-sm font-semibold tracking-wide text-brand-accent">Peternakan Domba Modern Karawang</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 font-heading">
+                    Dewan Farm <span class="gold-gradient-text">Karawang</span>
+                </h1>
+                <p class="text-lg md:text-2xl font-light text-gray-200 mb-8 leading-relaxed">
+                    <span id="typed-text"></span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#produk" class="bg-brand-accent hover:bg-brand-accentHover text-brand-primary font-bold px-8 py-4 rounded-16 shadow-xl transition transform hover:-translate-y-1 text-center text-lg flex items-center justify-center space-x-2">
+                        <span>Lihat Catalog Produk</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="https://wa.me/6285219602595?text=Halo%20Dewan%20Farm%20Karawang,%20saya%20tertarik%20dengan%20produk%20yang%20tersedia." target="_blank" class="bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-16 transition text-center text-lg flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-xl text-green-400"></i>
+                        <span>Pesan via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Counter Stats Card Overlay -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-5 gap-4 glass-card p-6 rounded-16 shadow-2xl border-white/10" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-center p-2">
+                    <div class="text-3xl md:text-4xl font-extrabold text-brand-accent font-heading">380+</div>
+                    <div class="text-xs md:text-sm text-gray-300 font-medium mt-1">Ekor Domba</div>
+                </div>
+                <div class="text-center p-2 border-l border-white/10">
+                    <div class="text-3xl md:text-4xl font-extrabold text-brand-accent font-heading">135+</div>
+                    <div class="text-xs md:text-sm text-gray-300 font-medium mt-1">Pelanggan Setia</div>
+                </div>
+                <div class="text-center p-2 border-l border-white/10">
+                    <div class="text-3xl md:text-4xl font-extrabold text-brand-accent font-heading">20+</div>
+                    <div class="text-xs md:text-sm text-gray-300 font-medium mt-1">Mitra Bisnis</div>
+                </div>
+                <div class="text-center p-2 border-l border-white/10">
+                    <div class="text-3xl md:text-4xl font-extrabold text-brand-accent font-heading">100+</div>
+                    <div class="text-xs md:text-sm text-gray-300 font-medium mt-1">Pengiriman Success</div>
+                </div>
+                <div class="col-span-2 md:col-span-1 text-center p-2 border-t md:border-t-0 md:border-l border-white/10 flex flex-col justify-center items-center">
+                    <div class="flex items-center space-x-1 text-yellow-400 text-xl font-bold">
+                        <span>4.9</span>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="text-xs md:text-sm text-gray-300 font-medium mt-1">Rating Kepuasan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SECTION TENTANG KAMI -->
+    <section id="tentang" class="py-24 bg-white dark:bg-brand-darkBg transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative">
+                        <img src="speaker.jpeg" alt="Kandang Modern Dewan Farm" class="rounded-16 shadow-2xl object-cover w-full h-[450px]">
+                        <div class="absolute -bottom-6 -right-6 bg-brand-primary text-white p-6 rounded-16 shadow-xl hidden sm:block border border-brand-accent/30 max-w-xs">
+                            <i class="fa-solid fa-quote-left text-brand-accent text-3xl mb-2"></i>
+                            <p class="text-sm italic font-light">"Mengutamakan kualitas, transparansi, dan pelayanan terbaik untuk kepuasan konsumen."</p>
+                            <p class="text-xs font-bold text-brand-accent mt-2">— Dhany Dewanto Putra (Founder)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <span class="text-brand-accent font-semibold tracking-wider text-sm uppercase">Profil Bisnis</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-primary dark:text-white mt-2 mb-6 font-heading">
+                        Standar Peternakan Agribisnis Nasional di Karawang
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        <strong>Dewan Farm Karawang</strong> adalah Bisnis peternakan domba modern terintegrasi yang didirikan oleh <strong>Dhany Dewanto Putra</strong>. Berlokasi di Karawang, Dewan Farm menerapkan sistem peternakan berbasis ilmu pengetahuan melalui seleksi genetik unggul, formulasi pakan berkualitas, biosekuriti yang ketat, serta pemantauan kesehatan secara berkala untuk menghasilkan ternak yang sehat, produktif, dan berkualitas tinggi. Dengan mengedepankan kualitas, transparansi, dan pelayanan terbaik, kami berkomitmen menjadi mitra terpercaya untuk kebutuhan qurban, aqiqah, bibit unggul, dan bakalan penggemukan.
+
+                    <!-- Visi Misi Tab Grid -->
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gray-50 dark:bg-brand-cardDark rounded-16 border-l-4 border-brand-accent">
+                            <h3 class="font-bold text-brand-primary dark:text-brand-accent text-lg flex items-center">
+                                <i class="fa-solid fa-eye mr-2"></i> Visi Kami
+                            </h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                                Menjadi perusahaan peternakan domba terpercaya di Indonesia yang mengutamakan kualitas, transparansi, dan pelayanan terbaik.
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-gray-50 dark:bg-brand-cardDark rounded-16 border-l-4 border-brand-primary dark:border-green-500">
+                            <h3 class="font-bold text-brand-primary dark:text-brand-accent text-lg flex items-center">
+                                <i class="fa-solid fa-bullseye mr-2"></i> Misi Kami
+                            </h3>
+                            <ul class="text-sm text-gray-600 dark:text-gray-300 mt-2 space-y-1 list-disc list-inside">
+                                <li>Menyediakan domba sehat dan berkualitas tinggi.</li>
+                                <li>Memberikan pelayanan yang cepat, ramah, dan profesional.</li>
+                                <li>Menjalin kemitraan agribisnis yang saling menguntungkan.</li>
+                                <li>Menerapkan peternakan modern yang berkelanjutan & ramah lingkungan.</li>
+                                <li>Mengedukasi masyarakat tentang peternakan domba berstandar.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECTION PRODUK -->
+    <section id="produk" class="py-24 bg-gray-50 dark:bg-brand-cardDark/40 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-accent font-semibold tracking-wider text-sm uppercase">Katalog Produk</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-primary dark:text-white mt-2 font-heading">
+                    Domba Berkualitas Pilihan
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">Seluruh ternak telah melewati uji kesehatan berkala, perawatan terukur, dan tersertifikasi.</p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white dark:bg-brand-cardDark rounded-16 shadow-lg overflow-hidden border border-gray-100 dark:border-gray-800 transform hover:-translate-y-2 transition duration-300" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="relative h-56">
+                        <img src="garut.jpeg" alt="Domba Qurban Premium" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-brand-accent text-brand-primary text-xs font-bold px-3 py-1 rounded-full">Qurban Premium</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-white mb-2">Domba Qurban Super</h3>
+                        <div class="space-y-2 text-xs text-gray-600 dark:text-gray-300 mb-4">
+                            <p><i class="fa-solid fa-weight-scale text-brand-accent mr-2"></i><strong>Berat:</strong> 45 - 60 kg</p>
+                            <p><i class="fa-solid fa-cake-candles text-brand-accent mr-2"></i><strong>Umur:</strong> > 12 Bulan (Sesuai Syariat)</p>
+                            <p><i class="fa-solid fa-dna text-brand-accent mr-2"></i><strong>Jenis:</strong> Garut / Dorper Cross</p>
+                            <p><i class="fa-solid fa-notes-medical text-brand-accent mr-2"></i><strong>Kesehatan:</strong> Bebas PMK, Bebas Cacing</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Mulai dari</span>
+                                <span class="text-lg font-bold text-brand-primary dark:text-brand-accent">Mulai dari Rp5.499.000</span>
+                            </div>
+                            <a href="https://wa.me/6285219602595?text=Halo%20Dewan%20Farm,%20saya%20ingin%20tanya%20Domba%20Qurban%20Super." target="_blank" class="bg-brand-primary hover:bg-brand-secondary text-white p-3 rounded-12 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white dark:bg-brand-cardDark rounded-16 shadow-lg overflow-hidden border border-gray-100 dark:border-gray-800 transform hover:-translate-y-2 transition duration-300" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="relative h-56">
+                        <img src="aqiqah.jpeg" alt="Domba Paket Aqiqah" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full">Khusus Aqiqah</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-white mb-2">Domba Aqiqah </h3>
+                        <div class="space-y-2 text-xs text-gray-600 dark:text-gray-300 mb-4">
+                            <p><i class="fa-solid fa-weight-scale text-brand-accent mr-2"></i><strong>Berat:</strong> 25 - 35 kg</p>
+                            <p><i class="fa-solid fa-cake-candles text-brand-accent mr-2"></i><strong>Umur:</strong> > 1 Tahun</p>
+                            <p><i class="fa-solid fa-dna text-brand-accent mr-2"></i><strong>Jenis:</strong> Domba Lokal / Compass</p>
+                            <p><i class="fa-solid fa-utensils text-brand-accent mr-2"></i><strong>Bonus:</strong> Layanan Olah Masakan</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Mulai dari</span>
+                                <span class="text-lg font-bold text-brand-primary dark:text-brand-accent">Mulai dari Rp 2.999.000 </span>
+                            </div>
+                            <a href="https://wa.me/6285219602595?text=Halo%20Dewan%20Farm,%20saya%20ingin%20tanya%20Domba%20Aqiqah." target="_blank" class="bg-brand-primary hover:bg-brand-secondary text-white p-3 rounded-12 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white dark:bg-brand-cardDark rounded-16 shadow-lg overflow-hidden border border-gray-100 dark:border-gray-800 transform hover:-translate-y-2 transition duration-300" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="relative h-56">
+                        <img src="anakan.jpeg" alt="Bibit Domba Unggul" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-yellow-600 text-white text-xs font-bold px-3 py-1 rounded-full">Khusus Pembibitan</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-white mb-2">Bibit Domba Unggul</h3>
+                        <div class="space-y-2 text-xs text-gray-600 dark:text-gray-300 mb-4">
+                            <p><i class="fa-solid fa-weight-scale text-brand-accent mr-2"></i><strong>Berat:</strong> 15 - 22 kg</p>
+                            <p><i class="fa-solid fa-cake-candles text-brand-accent mr-2"></i><strong>Umur:</strong> 4 - 6 Bulan</p>
+                            <p><i class="fa-solid fa-dna text-brand-accent mr-2"></i><strong>Genetik:</strong> F1/F2 Cross Dorper</p>
+                            <p><i class="fa-solid fa-shield-halved text-brand-accent mr-2"></i><strong>Sertifikat:</strong> Rekam Genetik & Vaksin</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Mulai dari</span>
+                                <span class="text-lg font-bold text-brand-primary dark:text-brand-accent">Mulai dari Rp 2.000.000</span>
+                            </div>
+                            <a href="https://wa.me/6285219602595?text=Halo%20Dewan%20Farm,%20saya%20tertarik%20dengan%20Bibit%20Domba." target="_blank" class="bg-brand-primary hover:bg-brand-secondary text-white p-3 rounded-12 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white dark:bg-brand-cardDark rounded-16 shadow-lg overflow-hidden border border-gray-100 dark:border-gray-800 transform hover:-translate-y-2 transition duration-300" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="relative h-56">
+                        <img src="biang.jpeg" alt="Bakalan Penggemukan" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-emerald-700 text-white text-xs font-bold px-3 py-1 rounded-full">Khusus Biang </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-gray-800 dark:text-white mb-2">Bakalan Penggemukan</h3>
+                        <div class="space-y-2 text-xs text-gray-600 dark:text-gray-300 mb-4">
+                            <p><i class="fa-solid fa-weight-scale text-brand-accent mr-2"></i><strong>Berat:</strong> 20 - 30 kg</p>
+                            <p><i class="fa-solid fa-cake-candles text-brand-accent mr-2"></i><strong>Umur:</strong> 6 - 8 Bulan</p>
+                            <p><i class="fa-solid fa-dna text-brand-accent mr-2"></i><strong>ADG Target:</strong> 150 - 250 gram/hari</p>
+                            <p><i class="fa-solid fa-truck-ramp-box text-brand-accent mr-2"></i><strong>Kapasitas:</strong> Partai Besar Ready</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Mulai dari</span>
+                                <span class="text-lg font-bold text-brand-primary dark:text-brand-accent">Mulai dari Rp2.499.000</span>
+                            </div>
+                            <a href="https://wa.me/6285219602595?text=Halo%20Dewan%20Farm,%20saya%20tertarik%20dengan%20Bakalan%20Penggemukan." target="_blank" class="bg-brand-primary hover:bg-brand-secondary text-white p-3 rounded-12 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION LAYANAN -->
+    <section id="layanan" class="py-24 bg-white dark:bg-brand-darkBg transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-accent font-semibold tracking-wider text-sm uppercase">Solusi Agribisnis Terpadu</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-primary dark:text-white mt-2 font-heading">
+                    Layanan Ekosistem Dewan Farm
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 rounded-16 border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark hover:border-brand-accent transition duration-300" data-aos="fade-up">
+                    <div class="w-14 h-14 bg-brand-primary/10 text-brand-primary dark:text-brand-accent rounded-16 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-kaaba"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white">Layanan Qurban Syar'i</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Penyediaan hewan Qurban sesuai syariat, penitipan gratis hingga H-1 Hari H, sertifikat kesehatan, dan fasilitas pemotongan/pengiriman higienis.</p>
+                </div>
+
+                <div class="p-8 rounded-16 border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark hover:border-brand-accent transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-brand-primary/10 text-brand-primary dark:text-brand-accent rounded-16 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-baby"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white">Aqiqah Siap Saji / Mentah</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Paket pemotongan aqiqah yang sah, higienis, dengan pilihan olahan masakan lezat (Sate, Gulai, Tongseng) yang dikemas higienis & diantar tepat waktu.</p>
+                </div>
+
+                <div class="p-8 rounded-16 border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark hover:border-brand-accent transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-brand-primary/10 text-brand-primary dark:text-brand-accent rounded-16 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-dna"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white">Breeding & Genetic Improvement</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Penyediaan pejantan dan indukan unggul ras Dorper, Garut, dan Crossbreed untuk meningkatkan mutu genetik populasi ternak Anda.</p>
+                </div>
+
+                <div class="p-8 rounded-16 border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark hover:border-brand-accent transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-brand-primary/10 text-brand-primary dark:text-brand-accent rounded-16 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white">Pengiriman Khusus Ternak</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Armada khusus yang mengutamakan keselamatan dan kenyamanan ternak (*Animal Welfare*) dengan jangkauan area Karawang, Jabodetabek & Seluruh Indonesia.</p>
+                </div>
+
+                <div class="p-8 rounded-16 border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark hover:border-brand-accent transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-brand-primary/10 text-brand-primary dark:text-brand-accent rounded-16 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white">Konsultasi & Kemitraan</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Edukasi pembuatan pakan fermentasi/konsentrat, desain konstruksi kandang modern, serta konsultasi manajemen kesehatan ternak.</p>
+                </div>
+
+                <div class="p-8 rounded-16 border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark hover:border-brand-accent transition duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-brand-primary/10 text-brand-primary dark:text-brand-accent rounded-16 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800 dark:text-white">Garansi Kesehatan & Kebijakan</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Garansi penggantian ternak 100% jika ternak mati, sakit, atau cacat sebelum tiba di tangan pembeli atau lokasi tujuan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECTION KEPERCAYAAN & TRANSPARANSI -->
+    <section id="kepercayaan" class="py-24 bg-brand-primary text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-accent font-semibold tracking-wider text-sm uppercase">Standar Kualitas Agribisnis</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 font-heading">Transparansi Tanpa Kompromi</h2>
+                <p class="text-gray-200 mt-2">Kami menerapkan protokol perawatan teruji yang siap ditinjau secara langsung maupun digital.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-16 border border-white/20" data-aos="zoom-in">
+                    <i class="fa-solid fa-file-contract text-brand-accent text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Legalitas & Sertifikasi</h3>
+                    <p class="text-sm text-gray-200">Memiliki kelengkapan berkas izin usaha peternakan resmi, rekomendasi Dinas Peternakan, serta Surat Keterangan Kesehatan Hewan (SKKH) lengkap.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-16 border border-white/20" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fa-solid fa-stethoscope text-brand-accent text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Pemeriksaan Dokter Hewan</h3>
+                    <p class="text-sm text-gray-200">Kunjungan dan monitoring rutin dari tim medis veteriner untuk penimbangan, vaksinasi berkala, dan penanganan kesehatan holistik.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-16 border border-white/20" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-solid fa-square-rss text-brand-accent text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Live Tracking & Kandang Open</h3>
+                    <p class="text-sm text-gray-200">Pelanggan dan calon pembeli dapat melakukan kunjungan *Survey Kandang* kapan saja atau meminta video kondisi fisik real-time ternak yang dipilih.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECTION MITRA -->
+    <section id="mitra" class="py-24 bg-white dark:bg-brand-darkBg transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                <span class="text-brand-accent font-semibold tracking-wider text-sm uppercase">Jaringan Bisnis & Ekosistem</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-primary dark:text-white mt-2 font-heading">
+                    Ekosistem & Komunitas Mitra
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">Bekerja sama dengan berbagai lembaga peternakan, asosiasi, dan penyedia layanan aqiqah nasional.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 text-center">
+                <div class="p-4 rounded-16 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark font-bold text-gray-700 dark:text-gray-300 text-sm flex items-center justify-center hover:shadow-md transition">HPDKI</div>
+                <div class="p-4 rounded-16 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark font-bold text-gray-700 dark:text-gray-300 text-sm flex items-center justify-center hover:shadow-md transition">Sentra Domba Garut</div>
+                <div class="p-4 rounded-16 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark font-bold text-gray-700 dark:text-gray-300 text-sm flex items-center justify-center hover:shadow-md transition">Aqiqah Nurul Hayat</div>
+                <div class="p-4 rounded-16 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark font-bold text-gray-700 dark:text-gray-300 text-sm flex items-center justify-center hover:shadow-md transition">Saung Domba Int.</div>
+                <div class="p-4 rounded-16 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark font-bold text-gray-700 dark:text-gray-300 text-sm flex items-center justify-center hover:shadow-md transition">Mitra Tani Farm</div>
+                <div class="p-4 rounded-16 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark font-bold text-gray-700 dark:text-gray-300 text-sm flex items-center justify-center hover:shadow-md transition">Dorper Indonesia</div>
+                <div class="p-4 rounded-16 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark font-bold text-gray-700 dark:text-gray-300 text-sm flex items-center justify-center hover:shadow-md transition">Kerabat Ternak</div>
+                <div class="p-4 rounded-16 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark font-bold text-gray-700 dark:text-gray-300 text-sm flex items-center justify-center hover:shadow-md transition">Kampung Domba</div>
+                <div class="p-4 rounded-16 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark font-bold text-gray-700 dark:text-gray-300 text-sm flex items-center justify-center hover:shadow-md transition">Boer Farm Indonesia</div>
+                <div class="p-4 rounded-16 border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-brand-cardDark font-bold text-gray-700 dark:text-gray-300 text-sm flex items-center justify-center hover:shadow-md transition">Rumah Aqiqah</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SECTION GALERI -->
+<section id="galeri" class="py-24 bg-gray-50 dark:bg-brand-cardDark/40 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <span class="text-brand-accent font-semibold tracking-wider text-sm uppercase">
+                Dokumentasi Peternakan
+            </span>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-primary dark:text-white mt-2 font-heading">
+                Galeri & Fasilitas Kandang
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Foto 1 -->
+            <div class="group relative overflow-hidden rounded-16 h-64 shadow-lg" data-aos="zoom-in">
+                <img src="kandang 1.jpeg" alt="Galeri 1"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span class="text-white font-semibold"></span>
+                </div>
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="group relative overflow-hidden rounded-16 h-64 shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                <img src="kandang 2.jpeg" alt="Galeri 2"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span class="text-white font-semibold"></span>
+                </div>
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="group relative overflow-hidden rounded-16 h-64 shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                <img src="kandang 3.jpeg" alt="Galeri 3"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span class="text-white font-semibold"></span>
+                </div>
+            </div>
+
+            <!-- Foto 4 -->
+            <div class="group relative overflow-hidden rounded-16 h-64 shadow-lg" data-aos="zoom-in">
+                <img src="kandang 4.jpeg" alt="Galeri 4"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span class="text-white font-semibold"></span>
+                </div>
+            </div>
+
+            <!-- Foto 5 -->
+            <div class="group relative overflow-hidden rounded-16 h-64 shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                <img src="kandang 5.jpeg" alt="Galeri 5"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span class="text-white font-semibold"></span>
+                </div>
+            </div>
+
+            <!-- Foto 6 -->
+            <div class="group relative overflow-hidden rounded-16 h-64 shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                <img src="kandang6.jpeg" alt="Galeri 6"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span class="text-white font-semibold"></span>
+                </div>
+            </div>
+
+            <!-- Foto 7 -->
+            <div class="group relative overflow-hidden rounded-16 h-64 shadow-lg" data-aos="zoom-in">
+                <img src="kandang7.jpeg" alt="Galeri 7"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span class="text-white font-semibold"></span>
+                </div>
+            </div>
+
+            <!-- Foto 8 -->
+            <div class="group relative overflow-hidden rounded-16 h-64 shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                <img src="kandang 8.jpeg" alt="Galeri 8"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span class="text-white font-semibold"></span>
+                </div>
+            </div>
+
+            <!-- Foto 9 -->
+            <div class="group relative overflow-hidden rounded-16 h-64 shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                <img src="kandang 9.jpeg" alt="Galeri 9"
+                    class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <span class="text-white font-semibold"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- 8. SECTION ARTIKEL / BLOG -->
+    <section id="artikel" class="py-24 bg-white dark:bg-brand-darkBg transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-accent font-semibold tracking-wider text-sm uppercase">Edukasi & Info Agribisnis</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-primary dark:text-white mt-2 font-heading">
+                    Artikel Terbaru
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-gray-50 dark:bg-brand-cardDark rounded-16 overflow-hidden shadow-md border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=500" alt="Artikel Pakan Fermentasi" class="h-48 w-full object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-accent uppercase">Manajemen Pakan</span>
+                        <h3 class="font-bold text-lg text-gray-800 dark:text-white mt-1 mb-2">Panduan Membuat Pakan Fermentasi Berkalori Tinggi</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">Teknik pengolahan silase pakan untuk menaikkan bobot harian ternak secara konsisten.</p>
+                        <a href="#kontak" class="text-brand-primary dark:text-brand-accent text-sm font-bold flex items-center space-x-1 hover:underline">
+                            <span>Baca Selengkapnya</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-gray-50 dark:bg-brand-cardDark rounded-16 overflow-hidden shadow-md border border-gray-100 dark:border-gray-800" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=500" alt="Artikel Syarat Hewan Qurban" class="h-48 w-full object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-accent uppercase">Edukasi Qurban</span>
+                        <h3 class="font-bold text-lg text-gray-800 dark:text-white mt-1 mb-2">Syarat Sah Hewan Qurban Sesuai Kaidah Syariah</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">Pahami kriteria umur, kondisi fisik, dan keabsahan cacat pada domba qurban.</p>
+                        <a href="#kontak" class="text-brand-primary dark:text-brand-accent text-sm font-bold flex items-center space-x-1 hover:underline">
+                            <span>Baca Selengkapnya</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-gray-50 dark:bg-brand-cardDark rounded-16 overflow-hidden shadow-md border border-gray-100 dark:border-gray-800" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&q=80&w=500" alt="Artikel Konstruksi Kandang" class="h-48 w-full object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-accent uppercase">Desain Kandang</span>
+                        <h3 class="font-bold text-lg text-gray-800 dark:text-white mt-1 mb-2">Pentingnya Sirkulasi Udara Kandang Panggung Modern</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-4">Mengurangi tingkat stres domba dan menekan amonia dengan konsep kandang panggung.</p>
+                        <a href="#kontak" class="text-brand-primary dark:text-brand-accent text-sm font-bold flex items-center space-x-1 hover:underline">
+                            <span>Baca Selengkapnya</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+   <!-- 9. SECTION TESTIMONI -->
+    <section id="testimoni" class="py-24 bg-gray-50 dark:bg-brand-cardDark/40 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-accent font-semibold tracking-wider text-sm uppercase">Ulasan Pembeli</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-primary dark:text-white mt-2 font-heading">
+                    Kepuasan Pelanggan & Mitra
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-brand-cardDark p-8 rounded-16 shadow-md border border-gray-100 dark:border-gray-800" data-aos="fade-up">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm italic mb-6">"Pesan domba qurban di Dewan Farm Karawang sangat puas! Hewan sehat, gemuk, bobot sesuai timbangan, dan diantar tepat waktu."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-primary text-white font-bold flex items-center justify-center">H</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800 dark:text-white">H. Ahmad Subagja</h4>
+                            <span class="text-xs text-gray-400">Sohibul Qurban - Jakarta</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-brand-cardDark p-8 rounded-16 shadow-md border border-gray-100 dark:border-gray-800" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm italic mb-6">"Proses pembelian domba Garut berjalan lancar. Admin memberikan informasi yang jelas dan pengiriman sesuai jadwal."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-accent text-brand-primary font-bold flex items-center justify-center">B</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800 dark:text-white">Bambang S.</h4>
+                            <span class="text-xs text-gray-400">Peternak - Bekasi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-brand-cardDark p-8 rounded-16 shadow-md border border-gray-100 dark:border-gray-800" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm italic mb-6">"Saya memilih paket aqiqah di Dewan Farm. Makanannya enak dan pengemasannya cukup rapi."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-primary text-white font-bold flex items-center justify-center">R</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800 dark:text-white">Rina Wijaya</h4>
+                            <span class="text-xs text-gray-400">Pelanggan Aqiqah - Karawang</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- 10. SECTION KONTAK & GOOGLE MAPS -->
+    <section id="kontak" class="py-24 bg-white dark:bg-brand-darkBg transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Info Kontak & Form -->
+                <div data-aos="fade-right">
+                    <span class="text-brand-accent font-semibold tracking-wider text-sm uppercase">Hubungi Kami</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-primary dark:text-white mt-2 mb-6 font-heading">
+                        Kunjungi Kandang / Konsultasi
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">
+                        Tim kami siap melayani pertanyaan seputar ketersediaan stok, pendaftaran kunjungan survey kandang, maupun pemesanan qurban dan aqiqah.
+                    </p>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-brand-primary/10 text-brand-primary dark:text-brand-accent rounded-16 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Alamat Lokasi</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Karawang, Jawa Barat, Indonesia (Lokasi Presisi via Google Maps)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-brand-primary/10 text-brand-primary dark:text-brand-accent rounded-16 flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">WhatsApp Direct</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">085219602595 (Admin Official)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-brand-primary/10 text-brand-primary dark:text-brand-accent rounded-16 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Email</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">putradhanydewanto@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form Button -->
+                    <a href="https://wa.me/6285219602595?text=Halo%20Dewan%20Farm%20Karawang,%20saya%20tertarik%20dengan%20produk%20yang%20tersedia.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="w-full bg-brand-primary hover:bg-brand-secondary text-white font-bold py-4 rounded-16 text-center block shadow-lg transition duration-300">
+                        <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Kirim Pesan WhatsApp Langsung
+                    </a>
+                </div>
+
+                <!-- Google Maps Embed Simulation -->
+                <div data-aos="fade-left" class="h-full min-h-[400px] bg-gray-200 rounded-16 overflow-hidden relative shadow-xl border border-gray-300 dark:border-gray-800">
+                    <iframe class="w-full h-full border-0 min-h-[400px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126909.11728286595!2d107.24151785!3d-6.30390175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6977be13904991%3A0x301e8f1fc28b8b0!2sKarawang%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-primary text-white border-t border-brand-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-white/10 rounded-12 flex items-center justify-center p-2 border border-brand-accent/30">
+                            <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30 35 C30 20, 70 20, 70 35 C70 50, 55 50, 50 65 L50 80" stroke="#D4AF37" stroke-width="8" stroke-linecap="round"/>
+                                <circle cx="50" cy="35" r="8" fill="#D4AF37"/>
+                            </svg>
+                        </div>
+                        <span class="font-heading font-bold text-xl tracking-wide text-white">DEWAN FARM</span>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                        Perusahaan peternakan domba modern terpercaya di Karawang. Mengutamakan kualitas genetik, higienitas pakan, transparansi kesehatan, serta pelayanan profesional.
+                    </p>
+                    <p class="text-xs text-brand-accent font-semibold">Founder: Dhany Dewanto Putra</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-brand-accent mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#beranda" class="hover:text-white transition">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="#produk" class="hover:text-white transition">Katalog Produk Domba</a></li>
+                        <li><a href="#layanan" class="hover:text-white transition">Layanan Terpadu</a></li>
+                        <li><a href="#kepercayaan" class="hover:text-white transition">Transparansi & Legalitas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-brand-accent mb-4">Layanan Utama</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#produk" class="hover:text-white transition">Domba Qurban Super</a></li>
+                        <li><a href="#produk" class="hover:text-white transition">Paket Aqiqah Ready</a></li>
+                        <li><a href="#produk" class="hover:text-white transition">Bibit & Indukan Unggul</a></li>
+                        <li><a href="#produk" class="hover:text-white transition">Bakalan Penggemukan</a></li>
+                        <li><a href="#layanan" class="hover:text-white transition">Konsultasi Kandang & Pakan</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-brand-accent mb-4">Kontak & Operasional</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><i class="fa-solid fa-location-dot mr-2 text-brand-accent"></i> Karawang, Jawa Barat</li>
+                        <li><i class="fa-brands fa-whatsapp mr-2 text-brand-accent"></i> 085219602595</li>
+                        <li><i class="fa-solid fa-envelope mr-2 text-brand-accent"></i> putradhanydewanto@gmail.com</li>
+                        <li><i class="fa-solid fa-clock mr-2 text-brand-accent"></i> Buka Setiap Hari: 08:00 - 17:00 WIB</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400">
+                <p>&copy; 2026 Dewan Farm Karawang. All Rights Reserved. Founder: Dhany Dewanto Putra.</p>
+                <div class="flex space-x-4 mt-4 sm:mt-0 text-brand-accent">
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram text-lg"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-facebook text-lg"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-youtube text-lg"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-tiktok text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6285219602595?text=Halo%20Dewan%20Farm%20Karawang,%20saya%20tertarik%20dengan%20produk%20yang%20tersedia.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" class="fixed bottom-6 right-6 z-40 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110 animate-bounce" title="Chat WhatsApp Admin">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Back To Top Button -->
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 left-6 z-40 bg-brand-primary text-brand-accent border border-brand-accent/40 w-12 h-12 rounded-full hidden flex items-center justify-center shadow-xl hover:bg-brand-secondary transition">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JS Libraries CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- App Scripts -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Typed.js Effect
+        new Typed('#typed-text', {
+            strings: [
+                'Peternakan Domba Berkualitas untuk Qurban.',
+                'Penyedia Aqiqah Higienis & Syar\'i.',
+                'Pembibitan & Penggemukan Modern.',
+                'Standar Transparansi & Perawatan Profesional.'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+
+        // Hide Loading Screen
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-screen');
+            loader.classList.add('opacity-0');
+            setTimeout(() => loader.style.display = 'none', 500);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile Link Click Handler
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Scroll Progress & Active Nav Link Highlight & Back To Top Visibility
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+
+            // Back to Top Button
+            const backToTop = document.getElementById('back-to-top');
+            if (winScroll > 400) {
+                backToTop.classList.remove('hidden');
+            } else {
+                backToTop.classList.add('hidden');
+            }
+
+            // Navbar Translucency on Scroll
+            const navbar = document.getElementById('navbar');
+            if (winScroll > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Dark Mode Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', toggleDarkMode);
+        themeToggleMobile.addEventListener('click', toggleDarkMode);
+
+        // Search Modal Overlay
+        function toggleSearch() {
+            const searchModal = document.getElementById('search-modal');
+            searchModal.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
